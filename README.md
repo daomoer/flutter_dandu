@@ -1,6 +1,6 @@
 # flutter_dandu
 
-A new Flutter application.
+通过项目来练习一下常用的组件、布局、网络请求、json解析等
 
 ### 项目分析介绍与总结地址：
 
