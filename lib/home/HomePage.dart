@@ -3,8 +3,7 @@ import "package:flutter/material.dart";
 import 'package:flutter_dandu/model/CommonModel.dart';
 import 'dart:convert';
 import 'package:flutter_dandu/common/CommentPage.dart';
-import 'package:url_launcher/url_launcher.dart';
-
+import 'package:flutter_dandu/common/CommonWebViewPage.dart';
 
 class PageViewScreen extends StatefulWidget {
   @override
@@ -48,18 +47,11 @@ class _PageViewState extends State<PageViewScreen> {
 }
 
 Widget calendarList(Datas data, int index,BuildContext context) {
-
-  void _launchURL(String url, BuildContext context) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   return InkWell(
       onTap: (){
-        _launchURL(data.html5, context);
+        Navigator.of(context).push(new MaterialPageRoute(builder: (ctx) {
+          return new CommonWebViewPage(url: data.html5,post_id: data.id,);
+        }));
       },
     child: Column(
       children: <Widget>[

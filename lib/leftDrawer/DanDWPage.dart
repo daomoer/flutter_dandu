@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dandu/model/CommonModel.dart';
 import 'dart:convert';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_dandu/common/CommonWebViewPage.dart';
 
 /// 单读问页面
 class DanDuWenPage extends StatefulWidget {
@@ -52,18 +52,13 @@ class _DanDWState extends State<DanDuWenPage> {
 
 
 Widget DanDuWenList(Datas data, int index,BuildContext context) {
-  void _launchURL(String url, BuildContext context) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   /// List点击事件
   return InkWell(
       onTap: (){
-       _launchURL(data.html5, context);
+        Navigator.of(context).push(new MaterialPageRoute(builder: (ctx) {
+          return new CommonWebViewPage(url: data.html5,post_id: data.id,);
+        }));
       },
     child: Stack(
       children: <Widget>[

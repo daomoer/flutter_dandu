@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter_dandu/model/CommonModel.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_dandu/common/CommonWebViewPage.dart';
 
 
 /// 声音页面
@@ -69,15 +69,6 @@ class _VoicePageState extends State<VoicePageStateful> {
 
 
 Widget VoiceList(Datas data, int index,BuildContext context) {
-  void _launchURL(String url, BuildContext context) async {
-
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-
-  }
 
   if (index.isOdd){
     return Divider(height: 1.0);
@@ -85,7 +76,9 @@ Widget VoiceList(Datas data, int index,BuildContext context) {
   /// List点击事件
   return InkWell(
     onTap: (){
-      _launchURL(data.html5, context);
+      Navigator.of(context).push(new MaterialPageRoute(builder: (ctx) {
+        return new CommonWebViewPage(url: data.html5,post_id: data.id,);
+      }));
     },
     child: Row(
       children: <Widget>[

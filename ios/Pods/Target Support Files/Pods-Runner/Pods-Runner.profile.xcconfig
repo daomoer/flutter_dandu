@@ -1,10 +1,10 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../.symlinks/flutter/ios"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Flutter" "${PODS_ROOT}/Headers/Public/flutter_webview_plugin" "${PODS_ROOT}/Headers/Public/url_launcher"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Flutter" "${PODS_ROOT}/Headers/Public/webview_flutter"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/flutter_webview_plugin" "${PODS_CONFIGURATION_BUILD_DIR}/url_launcher"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Flutter" -isystem "${PODS_ROOT}/Headers/Public/flutter_webview_plugin" -isystem "${PODS_ROOT}/Headers/Public/url_launcher"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"flutter_webview_plugin" -l"url_launcher" -framework "Flutter"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/webview_flutter"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Flutter" -isystem "${PODS_ROOT}/Headers/Public/webview_flutter"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"webview_flutter" -framework "Flutter"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

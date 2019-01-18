@@ -22,10 +22,9 @@ dependencies:
   english_words: ^3.1.4
   json_annotation: ^2.0.0
   dio: ^1.0.13
-  flutter_webview_plugin: ^0.3.0+2
   sticky_headers: ^0.1.7
   animated_text_kit: ^1.2.0
-  url_launcher: ^4.0.1
+  webview_flutter: ^0.2.0
 
 
 dev_dependencies:

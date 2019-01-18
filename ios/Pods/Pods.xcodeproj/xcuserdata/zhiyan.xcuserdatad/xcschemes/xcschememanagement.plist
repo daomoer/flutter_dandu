@@ -9,12 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>flutter_webview_plugin.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>url_launcher.xcscheme</key>
+		<key>webview_flutter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

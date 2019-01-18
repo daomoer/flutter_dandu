@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:flutter_dandu/common/CommentPage.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import 'dart:async';
 
 /// 公共WebView页面
 
@@ -9,13 +10,14 @@ class CommonWebViewPage extends StatefulWidget {
   @override
   final String url;
   final String post_id;
-  final flutterWebviewPlugin = new FlutterWebviewPlugin();
 
   CommonWebViewPage({Key key, @required this.url,this.post_id}) : super(key: key);
   _CommonWebViewPageState createState() => _CommonWebViewPageState();
 }
 
 class _CommonWebViewPageState extends State<CommonWebViewPage> {
+  final Completer<WebViewController> _controller =
+  Completer<WebViewController>();
 
   bool _isFavorite = true;
   @override
@@ -54,7 +56,6 @@ class _CommonWebViewPageState extends State<CommonWebViewPage> {
             ),
             new IconButton(icon: Image.asset('assets/comment_normal_26x27_@2x.png'),
                 onPressed: (){
-               widget.flutterWebviewPlugin.close();
                   Navigator.of(context).push(new MaterialPageRoute(builder: (ctx) {
                     return new CommentPageStateful(post_id: widget.post_id);
                   }));
@@ -67,13 +68,15 @@ class _CommonWebViewPageState extends State<CommonWebViewPage> {
             ),
           ],
         ),
-        body: _WebView(widget.url),
+        body: WebView(
+          initialUrl: widget.url,
+          javascriptMode: JavascriptMode.unrestricted,
+          onWebViewCreated: (WebViewController webViewController) {
+            _controller.complete(webViewController);
+          },
+        ),
       ),
     );
   }
-}
-
-Widget _WebView(String url) {
-  return WebviewScaffold(url: url);
 }
 
