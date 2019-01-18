@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/aapt.iml" filepath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/aapt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/flutter_webview_plugin/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/build/flutter_webview_plugin/generated/source/buildConfig/buildConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/generated/source/buildConfig/buildConfig1.iml" filepath="$PROJECT_DIR$/build/app/generated/source/buildConfig/buildConfig1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_dandu.iml" filepath="$PROJECT_DIR$/flutter_dandu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/flutter_webview_plugin/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/generateDebugRFile.iml" filepath="$PROJECT_DIR$/build/flutter_webview_plugin/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/generateDebugRFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/app/src/main/main.iml" filepath="$PROJECT_DIR$/android/app/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ios/.symlinks/plugins/flutter_webview_plugin/android/src/main/main1.iml" filepath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_webview_plugin/android/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ios/.symlinks/plugins/url_launcher/example/android/app/src/main/main2.iml" filepath="$PROJECT_DIR$/ios/.symlinks/plugins/url_launcher/example/android/app/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ios/.symlinks/plugins/flutter_webview_plugin/example/android/app/src/main/main3.iml" filepath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_webview_plugin/example/android/app/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ios/.symlinks/plugins/url_launcher/android/src/main/main4.iml" filepath="$PROJECT_DIR$/ios/.symlinks/plugins/url_launcher/android/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/merged_manifests/debug/processDebugManifest/merged/merged.iml" filepath="$PROJECT_DIR$/build/flutter_webview_plugin/intermediates/merged_manifests/debug/processDebugManifest/merged/merged.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/processDebugResources.iml" filepath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/processDebugResources.iml" />
+    </modules>
+  </component>
+</project>
